@@ -200,13 +200,6 @@ public class mainViewController {
         opr.setText(a + " " + operator);
     }
     
-    private Double getDouble (TextField tf) {
-        if (tf.getText().isEmpty()) {
-            return 0.0;
-        }
-        return Double.parseDouble(tf.getText());
-    }
-    
     private Double getDouble (Label lb) {
         if (lb.getText().isEmpty()) {
             return 0.0;
