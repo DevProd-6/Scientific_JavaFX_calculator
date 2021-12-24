@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.ToggleSwitch?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="381.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.devprod.scientific_javafx_calculator.mainViewController">
+   <children>
+      <Label fx:id="opr" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"/>
+      <TextField fx:id="tf" editable="false" layoutX="5.0" layoutY="35.0" prefHeight="23.0" AnchorPane.leftAnchor="5.0"
+                 AnchorPane.rightAnchor="5.0"/>
+      <Button id="btn-sm" fx:id="ac" layoutX="5.0" layoutY="88.0" mnemonicParsing="false" onAction="#onACClick"
+              prefHeight="23.0" styleClass="btn-danger" text="AC" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="118.0"/>
+      <Button fx:id="del" layoutX="120.0" layoutY="88.0" mnemonicParsing="false" onAction="#onDELClick"
+              prefHeight="23.0" styleClass="btn-warning" text="Del" AnchorPane.leftAnchor="120.0"
+              AnchorPane.rightAnchor="3.0"/>
+      <Label fx:id="on_off" layoutX="158.0" layoutY="66.0" text="ON" AnchorPane.leftAnchor="158.0"
+             AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="66.0"/>
+      <Button fx:id="pi" accessibleHelp="math" layoutX="5.0" layoutY="114.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="π" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="174.0"/>
+      <Button fx:id="prcntg" accessibleHelp="math" layoutX="62.0" layoutY="114.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="⁒" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="excla" accessibleHelp="math" layoutX="119.0" layoutY="114.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="χ!" AnchorPane.leftAnchor="119.0"
+              AnchorPane.rightAnchor="60.0"/>
+      <Button fx:id="exp" accessibleHelp="math" layoutX="176.0" layoutY="114.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="exp" AnchorPane.leftAnchor="176.0"
+              AnchorPane.rightAnchor="3.0"/>
+      <Button fx:id="dbl" accessibleHelp="math" layoutX="2.0" layoutY="137.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="χ²" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="174.0"/>
+      <Button fx:id="cbc" accessibleHelp="math" layoutX="62.0" layoutY="137.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="χ³" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="ypow" accessibleHelp="math" layoutX="119.0" layoutY="137.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="χʸ" AnchorPane.leftAnchor="119.0"
+              AnchorPane.rightAnchor="60.0"/>
+      <Button fx:id="sqrt" accessibleHelp="math" layoutX="176.0" layoutY="137.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="√" AnchorPane.leftAnchor="176.0"
+              AnchorPane.rightAnchor="3.0"/>
+      <Button fx:id="cos" accessibleHelp="math" layoutX="2.0" layoutY="160.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="cos" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="174.0"/>
+      <Button fx:id="sin" accessibleHelp="math" layoutX="62.0" layoutY="160.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="sin" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="tan" accessibleHelp="math" layoutX="119.0" layoutY="160.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="tan" AnchorPane.leftAnchor="119.0"
+              AnchorPane.rightAnchor="60.0"/>
+      <Button fx:id="log" accessibleHelp="math" layoutX="176.0" layoutY="160.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="log" AnchorPane.leftAnchor="176.0"
+              AnchorPane.rightAnchor="3.0"/>
+      <Button fx:id="ln" accessibleHelp="math" layoutX="2.0" layoutY="183.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="ln" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="174.0"/>
+      <Button fx:id="rev" accessibleHelp="math" layoutX="62.0" layoutY="183.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn" text="1/χ" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="sign" accessibleHelp="math" layoutX="121.0" layoutY="183.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" prefWidth="113.0" styleClass="btn" text="±"
+              AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="2.0"/>
+      <Button fx:id="sev" accessibleHelp="number" layoutX="5.0" layoutY="256.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" prefWidth="57.0" styleClass="btn-info" text="7"
+              AnchorPane.leftAnchor="5.0"/>
+      <Button fx:id="eigh" accessibleHelp="number" layoutX="62.0" layoutY="256.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="8" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="nin" accessibleHelp="number" layoutX="117.0" layoutY="256.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="9" AnchorPane.leftAnchor="117.0"
+              AnchorPane.rightAnchor="62.0"/>
+      <Button fx:id="div" accessibleHelp="arithmetic" layoutX="5.0" layoutY="225.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-primary" text="÷" AnchorPane.leftAnchor="5.0"
+              AnchorPane.rightAnchor="174.0"/>
+      <Button fx:id="four" accessibleHelp="number" layoutX="5.0" layoutY="279.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" prefWidth="57.0" styleClass="btn-info" text="4"
+              AnchorPane.leftAnchor="5.0"/>
+      <Button fx:id="five" accessibleHelp="number" layoutX="62.0" layoutY="279.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="5" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="six" accessibleHelp="number" layoutX="117.0" layoutY="279.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="6" AnchorPane.leftAnchor="117.0"
+              AnchorPane.rightAnchor="62.0"/>
+      <Button fx:id="mul" accessibleHelp="arithmetic" layoutX="62.0" layoutY="225.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-primary" text="×" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="one" accessibleHelp="number" layoutX="5.0" layoutY="302.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" prefWidth="57.0" styleClass="btn-info" text="1"
+              AnchorPane.leftAnchor="5.0"/>
+      <Button fx:id="two" accessibleHelp="number" layoutX="62.0" layoutY="302.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="2" AnchorPane.leftAnchor="62.0"
+              AnchorPane.rightAnchor="117.0"/>
+      <Button fx:id="thr" accessibleHelp="number" layoutX="117.0" layoutY="302.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-info" text="3" AnchorPane.leftAnchor="117.0"
+              AnchorPane.rightAnchor="62.0"/>
+      <Button fx:id="mins" accessibleHelp="arithmetic" layoutX="119.0" layoutY="225.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-primary" text="−"
+              AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="60.0"/>
+      <Button fx:id="zro" accessibleHelp="number" layoutX="5.0" layoutY="325.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" prefWidth="114.0" styleClass="btn-info" text="0"
+              AnchorPane.leftAnchor="5.0"/>
+      <Button fx:id="dot" layoutX="117.0" layoutY="325.0" mnemonicParsing="false" onAction="#setDot" prefHeight="23.0"
+              styleClass="btn-info" text="." AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="62.0"/>
+      <Button fx:id="equal" accessibleHelp="equal" layoutX="176.0" layoutY="256.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="92.0" prefWidth="57.0" styleClass="btn-success" text="＝"
+              AnchorPane.leftAnchor="176.0" AnchorPane.rightAnchor="3.0"/>
+      <Button fx:id="plus" accessibleHelp="arithmetic" layoutX="176.0" layoutY="225.0" mnemonicParsing="false"
+              onAction="#buttonManager" prefHeight="23.0" styleClass="btn-primary" text="＋"
+              AnchorPane.leftAnchor="176.0" AnchorPane.rightAnchor="3.0"/>
+      <ToggleSwitch fx:id="ts" layoutX="35.0" layoutY="64.0" onMouseClicked="#setOn_off" prefHeight="23.0"
+                    prefWidth="42.0" selected="true" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="10.0"/>
+   </children>
+</AnchorPane>
